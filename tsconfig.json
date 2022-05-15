@@ -1,6 +1,56 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "baseUrl": "src",
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es6",
+    "lib": [
+      "es6",
+      "dom",
+      "esnext"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "downlevelIteration": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "importHelpers": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": false,
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/*",
+      ".eslint.js"
+    ]
+  },
+  "include": [
+    "**/src/**/*.ts",
+    "**/src/**/*.tsx",
+    "**/src/**/*.js",
+    "**/src/**/*.jsx",
+    "src"
+, "src/App.tsx"  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "extends": "expo/tsconfig.base"
 }
